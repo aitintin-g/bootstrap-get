@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- 实现响应式布局必备标签，之前没加，都是流体布局 -->
+	<title>列表组面板与嵌入组件</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style>
+		.a{
+			width:300px;
+         height:50px;
+			border:1px solid #666;
+			background:#ccc;
+		}
+	</style>
+</head>
+<body style="margin:50px">
+	
+   <ul class="list-group"><!-- ul设置为列表组 -->
+     <li class="list-group-item">1</li><!-- li设置为列表组元素 -->
+     <li class="list-group-item">2 <span class="badge">2</span></li>
+     <li class="list-group-item">3</li>
+     <li class="list-group-item">4</li>
+   </ul>
+
+   <div class="list-group"><!-- 链接式列表 -->
+     <a href="#" class="list-group-item">1</a><!-- a上要带上href -->
+     <a href="#" class="list-group-item active">2 <span class="badge">2</span></a>
+     <a href="#" class="list-group-item disabled">3</a>
+     <a href="#" class="list-group-item list-group-item-success">4</a>
+   </div>
+
+   <div class="list-group"><!-- 定制式列表 -->
+     <a href="#" class="list-group-item">
+        <h4>标题</h4>
+        <p>点击这里</p>
+     </a><!-- a上要带上href -->
+     <a href="#" class="list-group-item active">2 <span class="badge">2</span></a>
+     <a href="#" class="list-group-item disabled">3</a>
+     <a href="#" class="list-group-item list-group-item-success">4</a>
+   </div>
+
+   <div class="panel panel-default"><!-- 面板组件 -->
+     <div class="panel-heading">
+       <h4 class="panel-title">我是头部</h4>
+     </div>
+     <div class="panel-body">
+       一个容器面板
+     </div>
+     <table class="table"><!-- 面板组件可以和表格无缝连接 -->
+       <tr>
+         <td>1</td>
+         <td>2</td>
+         <td>3</td>
+       </tr>
+       <tr>
+         <td>4</td>
+         <td>5</td>
+         <td>6</td>
+       </tr>
+     </table>
+     <ul class="list-group"><!-- 面板组件和列表也无缝连接 -->
+       <li class="list-group-item">1.首页</li><!-- li设置为列表组元素 -->
+       <li class="list-group-item">2.第二页 <span class="badge">2</span></li>
+       <li class="list-group-item">3.第三页</li>
+       <li class="list-group-item">4.尾页</li>
+     </ul>
+     <div class="panel-footer">
+       <h4 class="panel-title">我是底部</h4>
+     </div>
+   </div>
+
+   <div class="embed-responsive embed-responsive-4by3"><!-- 以4:3等比例缩放，响应式 -->
+     <embed src="" type="">
+   </div>
+
+   <div class="embed-responsive embed-responsive-16by9"><!-- 以16:9等比例缩放，响应式 -->
+     <embed src="" type="">
+   </div>
+
+
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- 实现响应式布局必备标签，之前没加，都是流体布局 -->
+	<title>标签页和工具提示插件</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style>
+		.a{
+			width:300px;
+         height:50px;
+			border:1px solid #666;
+			background:#ccc;
+		}
+	</style>
+</head>
+<body style="margin:50px">
+	
+   <ul class="nav nav-tabs"><!-- 这里用div会从出错，要用ul -->
+     <li class="active"><a href="#html5" data-toggle="tab">HTML5</a></li><!-- 使用data-toggle="tab"调用js -->
+     <li><a href="#jquery" data-toggle="tab">Jquery</a></li>
+     <li><a href="#bootstrap" data-toggle="tab">bootstrap</a></li>
+     <li><a href="#extjs" data-toggle="tab">extjs</a></li>
+   </ul>
+
+   <div class="tab-content" style="padding:10px">
+     <p class="tab-pane fade in active" id="html5">HTML5是Web中核心语言HTML的规范，用户使用任何手段进行网页浏览时看到的内容原本都是HTML格式的，在浏览器中通过一些技术处理将其转换成为了可识别的信息。HTML5在从前HTML4.01的基础上进行了一定的改进，虽然技术人员在开发过程中可能不会将这些新技术投入应用，但是对于该种技术的新特性，网站开发技术人员是必须要有所了解的。</p><!-- fade 淡出的效果，in 首选项默认显示，首选项中要有active -->
+     <p class="tab-pane fade" id="jquery">jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。</p>
+     <p class="tab-pane fade" id="bootstrap">Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。</p>
+     <p class="tab-pane fade" id="extjs">Query是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。</p>
+   </div>
+
+   <a id="a" href="" title="超文本标记" data-toggle="tooltip">HTML</a><!-- 工具提示，data-toggle的种类时tooltip.tooltip要通过js创建
+   工具提示还有其他属性和方法，这里省略 -->
+
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+  <script>
+    // 猜测是通过这个方法创建了一个供a调用的tooltip
+    $('#a').tooltip();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- 实现响应式布局必备标签，之前没加，都是流体布局 -->
+	<title>轮播插件</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style>
+		.a{
+			width:300px;
+         height:50px;
+			border:1px solid #666;
+			background:#ccc;
+		}
+	</style>
+</head>
+<body style="margin:50px">
+	
+   <div class="carousel slide" id="mycarousel" style="width:900px;"><!-- data-ride="carousel"控制自动播放 默认间隔5s -->
+     <ol class="carousel-indicators">
+       <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+       <li data-target="#mycarousel" data-slide-to="1"></li>
+       <li data-target="#mycarousel" data-slide-to="2"></li>
+     </ol>
+     <div class="carousel-inner">
+       <div class="item active">
+        <img src="img/lbq1.jpg" alt="">
+        <div class="carousel-caption">
+          <h4>HTML</h4>
+          <p>123</p>
+        </div>
+      </div>
+       <div class="item">
+        <img src="img/lbq2.jpg" alt="">
+        <div class="carousel-caption">
+          <h4>Extjs</h4>
+          <p>456</p>
+        </div>
+      </div>
+       <div class="item">
+        <img src="img/lbq3.jpg" alt="">
+        <div class="carousel-caption">
+          <h4>Bootstrap</h4>
+          <p>789</p>
+        </div>
+      </div>
+     </div>
+     <a href="" data-target="#mycarousel" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+     <a href="" data-target="#mycarousel" data-slide="next" class="carousel-control right">&rsaquo;</a>
+   </div>
+
+   
+
+   <button id="cycle" class="btn btn-default">开始</button>
+   <button id="pause" class="btn btn-default">停止</button>
+   <button id="to" class="btn btn-default">跳到第三张</button>
+   <button id="prev" class="btn btn-default">上一个</button>
+   <button id="next" class="btn btn-default">下一个</button>
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+  <script>
+    //如果HTML中未声明data-ride,可通过js来设置轮播器
+    // js开启自动轮播
+    // $('#mycarousel').carousel();
+
+    //js开启自动轮播，并设置间隔时间,hover时暂停轮播，持续轮播
+    // $('#mycarousel').carousel({
+    //   interval:2000,
+    //   pause:'hover',
+    //   wrap:true
+    // });
+
+    //可通过按钮加js控制轮播
+    //点击开始按钮开始轮播，点击结束按钮停止轮播
+    $('#cycle').on('click',function(){
+      $('#mycarousel').carousel('cycle');
+    });
+
+    $('#pause').on('click',function(){
+      $('#mycarousel').carousel('pause');
+    });
+
+    $('#to').on('click',function(){
+      $('#mycarousel').carousel(2);
+    });
+
+    $('#prev').on('click',function(){
+      $('#mycarousel').carousel('prev');
+    });
+
+    $('#next').on('click',function(){
+      $('#mycarousel').carousel('next');
+    });
+    
+
+  </script>
+</body>
+</html>

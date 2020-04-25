@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- 实现响应式布局必备标签，之前没加，都是流体布局 -->
+	<title>下拉菜单和滚动监听插件</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style>
+		.a{
+			width:300px;
+         height:50px;
+			border:1px solid #666;
+			background:#ccc;
+		}
+	</style>
+</head>
+<body style="margin:50px">
+	
+   <div class="dropdown"><!-- 下拉菜单，前面章节的内容 -->
+     <button class="btn btn-primary" data-toggle="dropdown">
+       下拉菜单<span class="caret"></span>
+     </button>
+     <ul class="dropdown-menu">
+       <li><a href="#">首页</a></li>
+       <li><a href="#">资讯</a></li>
+       <li><a href="#">产品</a></li>
+       <li><a href="#">关于</a></li>
+     </ul>
+   </div>
+
+   <nav class="navbar navbar-default"  id="dropdown"><!-- 这里注意导航条要用nav标签，不是div -->
+     <a href="#" class="navbar-brand">我是标题</a>
+     <ul class="nav navbar-nav">
+       <li><a href="#html5">HTML5</a></li>
+       <li><a href="#bootstrap">Bootstrap</a></li>
+       <li class="dropdown">
+           <a href="#" data-toggle="dropdown">Javascript <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="#jquery">Jquery</a></li>
+             <li><a href="#yui1">Yui</a></li>
+             <li><a href="#extjs">ExtJS</a></li>
+           </ul>
+       </li>
+     </ul>
+   </nav>
+
+   <div style="height:200px;overflow-y:scroll;width:100%;position:relative" data-spy="scroll" data-target="#dropdown" data-offset="0">
+    <!-- data-spy="scroll"监听滚动，然后会根据a标签锚点选定对应标题，data-target是为了定位具体目标，防止多个导航条下的标题被选定 data-offset定位偏移距离
+    这里必须要做相对定位，不让会异常 -->
+     <h4 id="html5">HTML5</h4>
+     <p>HTML5是Web中核心语言HTML的规范，用户使用任何手段进行网页浏览时看到的内容原本都是HTML格式的，在浏览器中通过一些技术处理将其转换成为了可识别的信息。HTML5在从前HTML4.01的基础上进行了一定的改进，虽然技术人员在开发过程中可能不会将这些新技术投入应用，但是对于该种技术的新特性，网站开发技术人员是必须要有所了解的。</p>
+     <h4 id="bootstrap">Bootstrap</h4>
+     <p>Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。</p>
+     <h4 id="jquery">Jquery</h4>
+     <p>jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。</p>
+     <h4 id="yui1">Yui</h4>
+     <p>Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。</p>
+     <h4 id="extjs">ExtJS</h4>
+     <p>Query是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。</p>
+   </div>
+
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

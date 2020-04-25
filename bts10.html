@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- 实现响应式布局必备标签，之前没加，都是流体布局 -->
+	<title>巨幕页头缩略图和警示框组件</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style>
+		.a{
+			width:300px;
+         height:50px;
+			border:1px solid #666;
+			background:#ccc;
+		}
+	</style>
+</head>
+<body>
+	
+   <div class="container"><!-- 巨幕，container固定尺寸，jumbotron流体，这种写法不如下面一种好 --> 
+      <div class="jumbotron">
+         <h3>网站主题</h3>
+         <p>网站简介</p>
+         <p class="btn btn-default"><a href="">快速进入</a></p>
+      </div>
+   </div>
+
+   <br>
+
+   <div class="jumbotron"><!-- 流体全屏，子元素用container固定尺寸居中 -->
+      <div class="container">
+         <h3>网站主题</h3>
+         <p>网站简介</p>
+         <p class="btn btn-default"><a href="">快速进入</a></p>
+      </div>
+   </div>
+
+   <div class="page-header"><!-- 页头 -->
+      <h1>
+         我是大标题<h3>我是小标题</h3>
+      </h1>
+   </div>
+
+   <div class="container">
+      <div class="row">
+          <div class="col-md-3 col-sm-4 col-xs-6"><!-- 响应式，不同分辨率下，占据不同列 -->
+             <div class="thumbnail"><!-- 缩略图，让图片等比例缩放 -->
+                <img src="img/section_bg.jpg" alt="">
+             </div>
+          </div>
+           <div class="col-md-3 col-sm-4 col-xs-6">
+             <div class="thumbnail">
+                <img src="img/section_bg.jpg" alt="">
+             </div>
+          </div>
+           <div class="col-md-3 col-sm-4 col-xs-6">
+             <div class="thumbnail">
+                <img src="img/section_bg.jpg" alt="">
+             </div>
+          </div>
+           <div class="col-md-3 col-sm-4 col-xs-6">
+             <div class="thumbnail">
+                <img src="img/section_bg.jpg" alt="">
+             </div>
+          </div>
+         
+      </div>
+   </div>
+
+
+   <div class="container"><!-- 自定义信息，可以为每个图片配上文字，整体效果类似figure -->
+      <div class="row">
+          <div class="col-md-3 col-sm-4 col-xs-6"><!-- 响应式，不同分辨率下，占据不同列 -->
+             <div class="thumbnail"><!-- 缩略图，让图片等比例缩放 -->
+                <img src="img/section_bg.jpg" alt="">
+                <h3>网站主题</h3>
+                <p>网站简介</p>
+                <p class="btn btn-default"><a href="">快速进入</a></p>
+             </div>
+          </div>
+           <div class="col-md-3 col-sm-4 col-xs-6">
+             <div class="thumbnail">
+                <img src="img/section_bg.jpg" alt="">
+                <h3>网站主题</h3>
+                <p>网站简介</p>
+                <p class="btn btn-default"><a href="">快速进入</a></p>
+             </div>
+          </div>
+           <div class="col-md-3 col-sm-4 col-xs-6">
+             <div class="thumbnail">
+                <img src="img/section_bg.jpg" alt="">
+                <h3>网站主题</h3>
+                <p>网站简介</p>
+                <p class="btn btn-default"><a href="">快速进入</a></p>
+             </div>
+          </div>
+           <div class="col-md-3 col-sm-4 col-xs-6">
+             <div class="thumbnail">
+                <img src="img/section_bg.jpg" alt="">
+                <h3>网站主题</h3>
+                <p>网站简介</p>
+                <p class="btn btn-default"><a href="">快速进入</a></p>
+             </div>
+          </div>
+      </div>
+   </div>
+
+   <div class="alert alert-success">
+      我是一个成功的警示框
+      <button class="btn btn-default close" data-dismiss="alert"><span>&times;</span></button>
+      <!-- data-*引入js dismiss 关闭 值为要关闭的对象 -->
+   </div>
+
+   <div class="alert alert-success">
+      我是一个成功的警示框<a href="" class="alert-link">请下载</a><!-- 默认超链接默认颜色,添加alert-link -->
+      <button class="btn btn-default close" data-dismiss="alert"><span>&times;</span></button>
+      <!-- data-*引入js dismiss 关闭 值为要关闭的对象 -->
+   </div>
+
+
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

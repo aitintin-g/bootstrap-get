@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- 实现响应式布局必备标签，之前没加，都是流体布局 -->
+	<title>模态框插件</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style>
+		.a{
+			width:300px;
+         height:50px;
+			border:1px solid #666;
+			background:#ccc;
+		}
+	</style>
+</head>
+<body style="margin:50px">
+	
+   <div class="modal" id="modal" tabindex="-1"><!-- 模态框声明 tabindex解决焦点不在模态框上无法关闭的问题 -->
+     <div class="modal-dialog"><!-- 窗口声明 -->
+       <div class="modal-content"><!-- 内容声明 -->
+         <div class="modal-heading">
+           <button class="close" data-dismiss="modal"><span>&times;</span></button><!-- 在modal的show类存在时，data-dismiss无法起效 -->
+           <h4 class="modal-title">会员登录</h4>
+         </div>
+         <div class="modal-body">
+           暂时无法登录
+         </div>
+         <div class="modal-footer">
+           <button class="btn btn-default">登录</button>
+           <button class="btn btn-primary">注册</button>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal">点击弹窗</button>
+   <!-- 这里button不在modal内，没和modal绑定，data-toggle只能判断类不能具体到哪个目标，所以要用data-target绑定一下 -->
+
+   <div class="modal fade" id="modal1" tabindex="-1"><!-- 模态框声明 tabindex解决焦点不在模态框上无法关闭的问题 fade 淡出效果 -->
+     <div class="modal-dialog"><!-- 窗口声明 -->
+       <div class="modal-content"><!-- 内容声明 -->
+         <div class="modal-heading">
+           <button class="close" data-dismiss="modal"><span>&times;</span></button><!-- 在modal的show类存在时，data-dismiss无法起效 -->
+           <h4 class="modal-title">会员登录</h4>
+         </div>
+         <div class="modal-body">
+           <div class="container-fluid"><!-- 使用流体布局 -->
+             <div class="col-md-4">1</div>
+             <div class="col-md-4">2</div>
+             <div class="col-md-4">3</div>
+           </div>
+         </div>
+         <div class="modal-footer">
+           <button class="btn btn-default">登录</button>
+           <button class="btn btn-primary">注册</button>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal1">点击弹窗</button>
+   <!-- 这里button不在modal内，没和modal绑定，data-toggle只能判断类不能具体到哪个目标，所以要用data-target绑定一下 -->
+
+   <!-- data-toggle 表示触发类型   data-target 表示触发节点   可以用href来代替data-target -->
+   <!-- data-backgrop boolean 表示是否有背景遮罩
+   data-keyboard boolean ESC能否关闭窗口 -->
+
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

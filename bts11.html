@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- 实现响应式布局必备标签，之前没加，都是流体布局 -->
+	<title>进度条、媒体、Well组件</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style>
+		.a{
+			width:300px;
+         height:50px;
+			border:1px solid #666;
+			background:#ccc;
+		}
+	</style>
+</head>
+<body style="margin:50px">
+	
+   <div class="well">Well组件</div><!-- 内嵌效果 -->
+
+   <div class="progress"><!-- 进度条 -->
+     <div class="progress-bar" style="width:60%">60%</div><!-- 进度条宽度值 -->
+   </div>
+
+   <div class="progress"><!-- 进度条 -->
+     <div class="progress-bar" style="min-width:20px;width:0">0</div><!-- 限制最小进度条宽度值 -->
+   </div>
+
+   <div class="progress"><!-- 进度条 -->
+     <div class="progress-bar progress-bar-success" style="min-width:20px;width:60%">0</div><!-- 限制最小值进度条值 -->
+   </div>
+
+   <div class="progress"><!-- 进度条 -->
+     <div class="progress-bar progress-bar-success progress-bar-striped" style="min-width:20px;width:60%">60%</div><!-- 限制最小值进度条值 -success和-striped类别不同，不会覆盖 -->
+   </div>
+
+    <div class="progress"><!-- 进度条 -->
+     <div class="progress-bar progress-bar-success progress-bar-striped active" style="min-width:20px;width:60%">60%</div><!-- 限制最小值进度条值 -success和-striped类别不同，不会覆盖 -->
+   </div><!-- 只有斑马线的可以做动画效果 -->
+
+   <div class="progress"><!-- 进度条 -->
+     <div class="progress-bar progress-bar-success" style="min-width:20px;width:30%">30%</div><!-- 限制最小值进度条值 -success和-striped类别不同，不会覆盖 -->
+     <div class="progress-bar progress-bar-danger" style="min-width:20px;width:35%">35%</div><!-- 限制最小值进度条值 -success和-striped类别不同，不会覆盖 -->
+     <div class="progress-bar progress-bar-warning" style="min-width:20px;width:35%">35%</div><!-- 限制最小值进度条值 -success和-striped类别不同，不会覆盖 -->
+   </div>
+
+   <div class="meida">
+     <div class="media-left">
+       <img src="img/logo.png" alt="" class="media-object">
+     </div>
+     <div class="media-body">
+       <h4 class="media-heading">电影</h4>
+       <p>豆瓣电影提供最新的电影介绍及评论包括上映影片的影讯查询及购票服务。你可以记录想看、在看和看过的电影电视剧,顺便打分、写影评。根据你的口味,豆瓣电影会推荐好...</p>
+     </div>
+   </div>
+   <br>
+   <br>
+
+   <ul class="media-list"><!-- 产生回帖的效果，媒体组件 -->
+     <li class="media">
+       <div class="media-left">
+         <img src="img/logo.png" alt="" class="media-object">
+       </div>
+       <div class="media-body">
+         <h4 class="media-heading">电影</h4>
+         <p>豆瓣电影提供最新的电影介绍及评论包括上映影片的影讯查询及购票服务。你可以记录想看、在看和看过的电影电视剧,顺便打分、写影评。根据你的口味,豆瓣电影会推荐好...</p>
+         <div class="meida">
+           <div class="media-left">
+             <img src="img/logo.png" alt="" class="media-object">
+           </div>
+           <div class="media-body">
+             <h4 class="media-heading">电影</h4>
+             <p>豆瓣电影提供最新的电影介绍及评论包括上映影片的影讯查询及购票服务。你可以记录想看、在看和看过的电影电视剧,顺便打分、写影评。根据你的口味,豆瓣电影会推荐好...</p>
+             <div class="meida">
+               <div class="media-left">
+                 <img src="img/logo.png" alt="" class="media-object">
+               </div>
+               <div class="media-body">
+                 <h4 class="media-heading">电影</h4>
+                 <p>豆瓣电影提供最新的电影介绍及评论包括上映影片的影讯查询及购票服务。你可以记录想看、在看和看过的电影电视剧,顺便打分、写影评。根据你的口味,豆瓣电影会推荐好...</p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </li>
+     <li class="media">
+       <div class="media-left">
+         <img src="img/logo.png" alt="" class="media-object">
+       </div>
+       <div class="media-body">
+         <h4 class="media-heading">电影</h4>
+         <p>豆瓣电影提供最新的电影介绍及评论包括上映影片的影讯查询及购票服务。你可以记录想看、在看和看过的电影电视剧,顺便打分、写影评。根据你的口味,豆瓣电影会推荐好...</p>
+       </div>
+     </li>
+   </ul>
+
+
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

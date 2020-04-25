@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- 实现响应式布局必备标签，之前没加，都是流体布局 -->
+	<title>图标菜单按钮组件</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style>
+		.a{
+			width:300px;
+         height:50px;
+			border:1px solid #666;
+			background:#ccc;
+		}
+	</style>
+</head>
+<body style="margin:50px">
+	<i class="glyphicon glyphicon-star"></i>
+   <span class="glyphicon glyphicon-star"></span>
+   <button type="" class="btn btn-default">
+      <span class="glyphicon glyphicon-star"></span>
+   </button>
+
+   <div class="dropdown"><!-- dropup为向上展开的菜单 -->
+      <button type="" class="btn btn-default btn-lg" data-toggle="dropdown"> <!-- 利用data-*自定义属性来触发js -->
+         下拉菜单 <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu"><!-- 成为下拉菜单的清单部分，且被隐藏 -->
+         <li><a href="">首页</a></li>
+         <li><a href="">资讯</a></li>
+         <li><a href="">产品</a></li>
+         <li><a href="">关于</a></li>
+      </ul>
+   </div>
+
+   <div class="dropdown"><!-- dropup为向上展开的菜单 -->
+      <button type="" class="btn btn-default btn-lg" data-toggle="dropdown"> <!-- 利用data-*自定义属性来触发js -->
+         下拉菜单 <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right"><!-- 下拉菜单居右显示 -->
+         <li><a href="">首页</a></li>
+         <li><a href="">资讯</a></li>
+         <li><a href="">产品</a></li>
+         <li><a href="">关于</a></li>
+      </ul>
+   </div>
+
+   <div class="dropdown"><!-- dropup为向上展开的菜单 -->
+      <button type="" class="btn btn-default btn-lg" data-toggle="dropdown"> <!-- 利用data-*自定义属性来触发js -->
+         下拉菜单 <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu"><!-- 下拉菜单居右显示 -->
+         <li class="dropdown-header">网站导航</li><!-- 设置菜单标题 -->
+         <li class="divider"></li>
+         <li><a href="">首页</a></li>
+         <li><a href="">资讯</a></li>
+         <li><a href="">产品</a></li>
+         <li class="divider"></li>
+         <li class="disabled"><a href="">关于</a></li><!-- 设置禁用项 -->
+      </ul>
+   </div>
+
+   <button class="btn btn-dafault">左</button>
+   <button class="btn btn-dafault">中</button>
+   <button class="btn btn-dafault">右</button>
+
+   <div class="btn-group"><!-- 按钮群组 -->
+      <button class="btn btn-dafault">左</button>
+      <button class="btn btn-dafault">中</button>
+      <button class="btn btn-dafault">右</button>
+   </div>
+   <br>
+   <br>
+   <br>
+   <div class="btn-toolbar"><!-- 按钮条 -->
+      <div class="btn-group"><!-- 按钮群组 -->
+         <button class="btn btn-dafault">左</button>
+         <button class="btn btn-dafault">中</button>
+         <button class="btn btn-dafault">右</button>
+      </div>
+      <div class="btn-group btn-group-lg"><!-- 按钮群组 -->
+         <button class="btn btn-dafault">左</button>
+         <button class="btn btn-dafault">中</button>
+         <button class="btn btn-dafault">右</button>
+      </div>
+   </div>
+   <br>
+   <br>
+   <br>
+   <div class="btn-group"><!-- 按钮群组 -->
+      <button class="btn btn-dafault">左</button>
+      <button class="btn btn-dafault">中</button>
+      <button class="btn btn-dafault">右</button>
+      <div class="btn-group"><!-- 放在按钮群组中，要将dropdown改为btn-group  按钮式下拉菜单 -->
+         <button type="" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <!-- 利用data-*自定义属性来触发js  父元素无dropdown类，要在自身增加dropdown-toggle类-->
+            下拉菜单 <span class="caret"></span>
+         </button>
+         <ul class="dropdown-menu"><!-- 下拉菜单居右显示 -->
+            <li class="dropdown-header">网站导航</li><!-- 设置菜单标题 -->
+            <li class="divider"></li>
+            <li><a href="">首页</a></li>
+            <li><a href="">资讯</a></li>
+            <li><a href="">产品</a></li>
+            <li class="divider"></li>
+            <li class="disabled"><a href="">关于</a></li><!-- 设置禁用项 -->
+         </ul>
+      </div>
+   </div>
+
+   <div class="btn-group-vertical"><!-- 按钮群组垂直排列 -->
+      <button class="btn btn-dafault">左</button>
+      <button class="btn btn-dafault">中</button>
+      <button class="btn btn-dafault">右</button>
+   </div>
+
+    <div class="btn-group-justified"><!-- 按钮群组居中排列 子元素用a，用button麻烦-->
+      <a class="btn btn-dafault a">左</a>
+      <a class="btn btn-dafault a">中</a>
+      <a class="btn btn-dafault a">右</a>
+   </div>
+
+
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- 实现响应式布局必备标签，之前没加，px单位就会被缩放 -->
+	<title>栅格系统</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style>
+		.a{
+			height:50px;
+			border:1px solid #666;
+			background:#ccc;
+		}
+	</style>
+</head>
+<body style="margin:50px">
+	
+   <div class="container"> <!-- 固定宽度布局 -->
+   	  <div class="row">
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  	<div class="col-md-1 a">1</div>
+   	  </div>
+   </div>
+
+    <div class="container"> <!-- 固定宽度布局 -->
+   	  <div class="row">
+   	  	<div class="col-md-9 a">9</div>
+   	  	<div class="col-md-3 a">3</div>
+   	  </div>
+   </div>
+
+    <div class="container"> <!-- 固定宽度布局 -->
+   	  <div class="row">
+   	  	<div class="col-md-3 a">3</div>
+   	  	<div class="col-md-3 a">3</div>
+   	  	<div class="col-md-3 a">3</div>
+   	  	<div class="col-md-3 a">3</div>
+   	  </div>
+   </div>
+
+   <!-- -xs 手机  -sm  平板  -md 中等屏幕  -lg 大屏幕 -->
+    <br>
+    <br>
+   <div class="container"> <!-- 固定宽度布局 为不同的屏幕设置不同的响应布局 -->
+   	  <div class="row">
+   	  	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 a"></div>
+   	  	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 a"></div>
+   	  	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 a"></div>
+   	  	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 a"></div>
+   	  	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 a"></div>
+   	  	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 a"></div>
+   	  	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 a"></div>
+   	  	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 a"></div>
+   	  </div>
+   </div>
+
+   <div class="container"> <!-- 固定宽度布局 偏移一列 -->
+   	  <div class="row">
+   	  	<div class="col-md-8 a">8</div>
+   	  	<div class="col-md-3 col-md-offset-1 a">3</div>
+   	  </div>
+   </div>
+
+   <div class="container"> <!-- 固定宽度布局 嵌套 -->
+   	  <div class="row">
+   	  	<div class="col-md-9 a" style="padding:0">9 <!-- 把这个div当做一行，又分为12列 -->
+   	  		<div class="col-md-9 a">9</div>
+   	  		<div class="col-md-3 a">3</div>
+   	  	</div>
+   	  	<div class="col-md-3 a">3</div>
+   	  </div>
+   </div>
+   <br>
+   <br>
+   <div class="container"> <!-- 固定宽度布局 -->
+   	  <div class="row">
+   	  	<div class="col-md-9 col-md-push-3 a">9</div> <!-- 向左移动3列 -->
+   	  	<div class="col-md-3 col-md-pull-9 a">3</div> <!-- 向右移动9列 -->
+   	  </div>
+   </div>
+
+   <div class="container-fluid"> <!-- 100%,流体布局 -->
+   	
+   </div>
+
+   <!-- 这两个标签不能相互嵌套 -->
+
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

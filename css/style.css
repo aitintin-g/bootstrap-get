@@ -1,0 +1,273 @@
+.carousel{
+      margin-top:50px;
+}
+
+.carousel img{
+  margin:0 auto;
+}
+
+.carousel-control{
+  font-size:100px;
+}
+
+.tab1{
+	margin:30px;
+    color:#666;
+}
+
+.tab-h2{
+	font-size:20px;
+	text-align:center;
+	letter-spacing:1px;
+	color:#0059b2;
+}
+
+.tab-p{
+	font-size:15px;
+	text-align:center;
+	letter-spacing:1px;
+	color:#999;
+}
+
+.tab1 .text-muted{
+	color:#888;
+	text-decoration:line-through;
+}
+
+.tab1 .media-heading{
+	margin:5px 0 20px 0;
+}
+
+.tab1 .col{
+	padding:20px;
+}
+
+.tab2{
+	background:#ccc;
+	padding:60px 20px;
+	text-align:center;
+}
+/*图片百分比宽度，会跟随父元素宽度*/
+.tab3{
+	padding:40px 0;
+	text-align:center;
+}
+
+.tab2 img{
+	width:45%;
+	height:45%;
+}
+
+.tab3 img{
+	width:65%;
+	height:65%;
+}
+
+
+.jumbotron{
+	background:#ccc url(../img/bg.jpg);
+	margin-top:50px;
+	padding:50px 0;
+	color:#ccc;
+}
+
+/*移动端优先，这里的样式均为移动端样式*/
+.jumbotron h1{
+	font-size:26px;
+	padding-bottom:20px;
+}
+
+.jumbotron h4{
+	font-size:15px;
+	padding-bottom:20px;
+}
+
+#information{
+	background:#eee;
+	padding:40px 0;
+}
+
+.row.info-content{
+	background:#fff;
+	box-shadow:2px 2px 3px #eee;
+	/*margin-bottom:20px;*/
+	margin: 0 0 20px 0;
+	/*这里不直接使用margin-bottom是因为要将.row的-15px的左右边距设为0*/
+}
+
+.info-content h4{
+	color:#333;
+	margin-top:10px;
+	font-size:14px;
+}
+
+.info-content p{
+	line-height:1.6;
+	/*以字体大小为参照*/
+}
+
+.info-right{
+	background:#fff;
+}
+
+.info-right .col-img{
+	margin:12px 0;
+}
+
+.info-right .col-text h4{
+	color:#333;
+	padding-right:0;
+}
+
+.info-right blockquote{
+	margin:0;
+	padding:0;
+}
+
+.info-right h2{
+    font-size: 20px;
+    color: #333;
+    padding: 5px;
+}
+
+.caption p{
+	line-height:1.6;
+}
+
+#about a{
+	color:#0059b2;
+}
+
+.about{
+	box-shadow:2px 2px 3px #333;
+}
+
+#about h3{
+	font-size:16px;
+	color:#333;
+	border-bottom:1px solid #eee;
+	margin:0 0 10px 0;
+	padding:20px 0;
+}
+
+#about p{
+	line-height:2;
+	font-size:13px;
+}
+
+#footer{
+	background:#666;
+	border-top:1px solid #ccc;
+	padding:20px;
+	text-align:center;
+	color:#eee;
+}
+
+/*bootstrap优先移动端开发，所以上面样式应是移动端样式，pc端可以写在媒体查询内*/
+
+/*小屏幕*/
+@media (min-width:768px){
+	.tab-h2{
+		font-size:30px;
+	}
+
+	.tab-p{
+		font-size:16px;
+	}
+   /*大于768时，tab2调整成文字在左侧，图片在右侧,tab3不调整，顺序相反*/
+	.tab2-text{
+		float:left;
+	}
+
+	.tab2-img{
+		float:right;
+	}
+
+	.jumbotron h1{
+		font-size:30px;
+	}
+
+	.jumbotron h4{
+		font-size:16px;
+	}
+
+	.info-content h4{
+		font-size:16px;
+	}
+
+	#about h3{
+		font-size:19px;
+		
+	}
+
+	#about p{
+		font-size:14px;
+	}
+}
+
+/*中等屏幕*/
+@media (min-width:996px){
+	.tab-h2{
+		font-size:30px;
+	}
+
+	.tab-p{
+		font-size:17px;
+	}
+
+	.jumbotron h1{
+		font-size:33px;
+	}
+
+	.jumbotron h4{
+		font-size:17px;
+	}
+
+	.info-content h4{
+		font-size:18px;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
+	}
+
+	#about h3{
+		font-size:20px;
+		
+	}
+
+	#about p{
+		font-size:15px;
+	}
+}
+
+/*大屏幕*/
+@media (min-width:1200px){
+	.tab-h2{
+		font-size:30px;
+	}
+
+	.tab-p{
+		font-size:18px;
+	}
+
+	.jumbotron h1{
+		font-size:36px;
+	}
+
+	.jumbotron h4{
+		font-size:18px;
+	}
+
+	.info-content h4{
+		font-size:18px;
+	}
+
+	#about h3{
+		font-size:22px;
+		
+	}
+
+	#about p{
+		font-size:16px;
+	}
+}
